@@ -28,7 +28,7 @@ let bird = {
   w: 58,
   h: 46,
   vy: 0,
-  g: 0.10,
+  g: 0.28,
   flap: -5,
   rot: 0
 };
@@ -36,7 +36,7 @@ let bird = {
 let pipes = [];
 let frame = 0;
 let spawnRate = 120; // frames
-let gap = 200;
+let gap = 180;
 let speed = 1.9;
 let score = 0;
 let best = 0;
