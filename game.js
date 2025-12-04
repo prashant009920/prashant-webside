@@ -28,15 +28,15 @@ let bird = {
   w: 58,
   h: 46,
   vy: 0,
-  g: 0.45,
-  flap: -8,
+  g: 0.25,
+  flap: -5,
   rot: 0
 };
 
 let pipes = [];
 let frame = 0;
 let spawnRate = 120; // frames
-let gap = 160;
+let gap = 200;
 let speed = 1.9;
 let score = 0;
 let best = 0;
@@ -46,7 +46,7 @@ const groundHeight = 86;
 
 // Reset game
 function reset(){
-  bird.y = H/2 - 20; bird.vy = 0; bird.rot = 0;
+  bird.y = H/2 - 15; bird.vy = 0; bird.rot = 0;
   pipes = []; frame = 0; score = 0; running = true; gameOver = false;
   SCORE.innerText = score;
 }
@@ -210,7 +210,7 @@ function update(){
     bird.y=H-groundHeight-bird.h;
     gameOver=true; running=false;
   }
-  if(bird.y<-20){ bird.y=-20; bird.vy=0; }
+  if(bird.y<-20){ bird.y=-10; bird.vy=0; }
 }
 
 // Render everything
